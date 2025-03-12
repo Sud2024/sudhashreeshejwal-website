@@ -20,7 +20,7 @@ class Bottomline extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                "Designed and developed with Flutter and passion. 💙🔥",
+                "Designed and developed with Flutter and passion....... 💙🔥",
                 textAlign: TextAlign.center,
                 style: GoogleFonts.montserrat(
                   color: Color(0xFFFFFFFF),
