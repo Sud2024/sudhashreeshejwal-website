@@ -1,0 +1,720 @@
+[33mcommit 95a2ec84a16948e5d5cde4bcb3931aa7ff24536b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Sud2024 <sudhashreeswt@gmail.com>
+Date:   Thu Mar 13 01:30:15 2025 +0530
+
+    Initial Commit
+
+[1mdiff --git a/.firebase/hosting.YnVpbGRcd2Vi.cache b/.firebase/hosting.YnVpbGRcd2Vi.cache[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1f48778[m
+[1m--- /dev/null[m
+[1m+++ b/.firebase/hosting.YnVpbGRcd2Vi.cache[m
+[36m@@ -0,0 +1,43 @@[m
+[32m+[m[32mversion.json,1741808301234,ad484ecfdd62ea460e0b66554aea595005aef1d35ee471dc588dab69d6986fff[m
+[32m+[m[32mflutter.js,1741763311208,843b4175654fd94708022d55eaaed1c524df379e733a4c27c8168450143016e9[m
+[32m+[m[32mindex.html,1741808228052,be39828273bfa28f9a170136ba5efb4138126d6658ec4c39a7e2dff2f07e5754[m
+[32m+[m[32mmanifest.json,1734965740101,404e1170f3cffd2bca189c9016eb3b220814821c0b46a2fe276f86ed57282b2b[m
+[32m+[m[32mflutter_bootstrap.js,1741808228034,e8964eb1224306ea650f3b93dbc729b499f0c536ea07e7faebbbbc0e316cc606[m
+[32m+[m[32mflutter_service_worker.js,1741808310909,fd4c32a68867e1a6accdb23ab02521d9689cf06f6ac811d90d43877544c932fe[m
+[32m+[m[32micons/Icon-192.png,1734336318198,5fd961c51d8eb53baacac01f8e53743a76f66a43390a11f5df042e8c618ad64a[m
+[32m+[m[32micons/Icon-maskable-192.png,1734965655207,f7ac56197638aec92f195c5344d15395c2cbf8a5ae74e846c5b4156b64f05e38[m
+[32m+[m[32micons/Icon-512.png,1734336318245,1de493563deb283e6ad70f0d5a89cfd61e37343df3b919c9862c5a41699ac5bc[m
+[32m+[m[32mcanvaskit/skwasm_st.js,1741763310779,7f097811fb848295340c14deb0cf491d63923436f77c4fc9fd06f66f62c5b901[m
+[32m+[m[32massets/AssetManifest.json,1741808302725,d3c5d6cbd9e3a2eef71723e2762cb2029eb0a2b59d45035fa1f5916eb931d4f1[m
+[32m+[m[32massets/AssetManifest.bin.json,1741808302727,9d5d83508215787b78ebf1eaea69d11f4bf3ceb3746479b5cdf1c3b23b937322[m
+[32m+[m[32massets/AssetManifest.bin,1741808302733,dee4cca60510705532d9e25e4bc66848ec4a1e22ad923e348fa68a75d9f8014c[m
+[32m+[m[32massets/FontManifest.json,1741808302733,e4759772c97322acbd7b85a853faabe41affb8fb94d5d2734cb76190be883349[m
+[32m+[m[32massets/shaders/ink_sparkle.frag,1741808303886,591c7517d5cb43eb91ea451e0d3f9f585cbf8298cf6c46a9144b77cb0775a406[m
+[32m+[m[32massets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf,1741808308145,e7e9ba83a379349ff47c27e6967bd2bca6c7c7117153b414e6c6a59514e40ac3[m
+[32m+[m[32massets/fonts/MaterialIcons-Regular.otf,1741808308198,522e99756767f912b1f728ff4ae358f5a394abc1795a154d5917183201b6405e[m
+[32m+[m[32massets/packages/cupertino_icons/assets/CupertinoIcons.ttf,1741808308144,d41473de1f7708a0702d7f19327693486512db442f6ab0cf7774e6d6576f9fcb[m
+[32m+[m[32massets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf,1741808308145,d0a342e0bd3c3424979d3a8f3a4b9ff067a06aa67599d01664a5d88ec0f02353[m
+[32m+[m[32micons/Icon-maskable-512.png,1734965655205,ea58e5c49bc4dcdc5db0a9fe2f25b2a3152f85ef9094f0d020de0aa318451a1d[m
+[32m+[m[32massets/assets/lockband.png,1741370295005,2a022787ff7d1c1022cd03a064738a362cc90b9eeb6e34d34d0a1d94c0ef4e54[m
+[32m+[m[32mcanvaskit/canvaskit.js,1741763310477,1c6bf82f4c2ff9fcfa96014e1323acc90228d1bc83be82087fc074bb91f5e145[m
+[32m+[m[32mcanvaskit/chromium/canvaskit.js,1741763310547,8e4ef59e2758159c06a6ba7fcb7dddc9b953d9ac2f46b2cb6b3bed6750f9e3a1[m
+[32m+[m[32mcanvaskit/skwasm.js,1741763310592,e8556ec6ef77a92c1c650103ebf9a7df3642bf24f5ba95820df96994586b482c[m
+[32m+[m[32massets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf,1739565734696,caec2eef56bbea8e2d7146984329cc83f961dd4e3b135ea975f4ed01c9896da6[m
+[32m+[m[32massets/assets/resume.pdf,1741628543921,f5466e1465e05ead56af14ac79966a94c50facb67b8b5382d3086e5def5e5343[m
+[32m+[m[32mfavicon.png,1740667820494,471759b759d004db2be5759f2b3ff9d3478ba7048268690738b6b2a94e71004f[m
+[32m+[m[32massets/assets/nhm.png,1741371170552,567d63b744d16a405a0160d3cd13d07cfd1937f6ada72f29270c8f4d62565c07[m
+[32m+[m[32massets/assets/myportfolio.webp,1741370705764,37b2d23f922da9454eebad82b3440377fe01bda0959c0ff1344b76ffd2e611fb[m
+[32m+[m[32mcanvaskit/chromium/canvaskit.js.symbols,1741763310554,e3c8502ed70baa180726b7b0c9344c4a5409bf2722e0710bd55f2afd464246b5[m
+[32m+[m[32massets/NOTICES,1741808302737,2fb7b288b1695aefa6df944aae18b6a2ecd16af334d468af55335b9662a9d419[m
+[32m+[m[32mcanvaskit/canvaskit.js.symbols,1741763310498,dc06d86b568865a5ea79334b1fe84c435154802e8d6832818970eacf16d4c9f2[m
+[32m+[m[32mcanvaskit/skwasm_st.js.symbols,1741763310804,67ce1c9ce2d7a402294908f738ca10d97167475bc71e94aef6fcb3f7b4aca9b5[m
+[32m+[m[32mcanvaskit/skwasm.js.symbols,1741763310638,bb8d3ba82c4539d4bfebbe8af9398cc5890bcca21f6acae3c00f8a6a1cacc814[m
+[32m+[m[32mmain.dart.js,1741808292891,838bb68df23b1d5e97b24f9b6f6a6ea0f6dc5d59d18193f237dc2306210b94cb[m
+[32m+[m[32mcanvaskit/skwasm.wasm,1741763310763,f9dbb3615666b35096b3b3e5bb1f93a53e0742e8808e906cccb548a04ab53e2f[m
+[32m+[m[32mcanvaskit/chromium/canvaskit.wasm,1741763310590,829d9e6faa4899020801a7821358ee3e610630fc6f5a4fec0d2b5e9d8217a99c[m
+[32m+[m[32massets/assets/myself.png,1740680174154,deda0d1a9292f3aaf3451d9909287358d761d5c16e408d0e8278c9e58155b1b7[m
+[32m+[m[32mcanvaskit/skwasm_st.wasm,1741763310826,b518709db54052c5efd05d0c64676d2159aaf35c69a4779f93727cfa63ee017e[m
+[32m+[m[32massets/packages/material_symbols_icons/lib/fonts/MaterialSymbolsOutlined.ttf,1738482967573,cbcc300909e7ab940d006748a4de9618fc0d68558bb52021fc18487810d04448[m
+[32m+[m[32massets/packages/material_symbols_icons/lib/fonts/MaterialSymbolsSharp.ttf,1738482967000,f26260e527fa6b4e482bdf5dfa8ee4fb9a1f9a5911511bd60f5f887782023399[m
+[32m+[m[32mcanvaskit/canvaskit.wasm,1741763310541,dd73869f7a4737b9fbeb6c6acc8908dce896a285dcb111f7b55d753e07ae6be4[m
+[32m+[m[32massets/packages/material_symbols_icons/lib/fonts/MaterialSymbolsRounded.ttf,1738482967356,46a11ce93bbf5740861644a32a56105a57d14b48100b60b08536900bfeb2c79d[m
+[1mdiff --git a/.firebaserc b/.firebaserc[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6e856d5[m
+[1m--- /dev/null[m
+[1m+++ b/.firebaserc[m
+[36m@@ -0,0 +1,5 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  "projects": {[m
+[32m+[m[32m    "default": "sudhashreeshejwal-website"[m
+[32m+[m[32m  }[m
+[32m+[m[32m}[m
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..79c113f[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1,45 @@[m
+[32m+[m[32m# Miscellaneous[m
+[32m+[m[32m*.class[m
+[32m+[m[32m*.log[m
+[32m+[m[32m*.pyc[m
+[32m+[m[32m*.swp[m
+[32m+[m[32m.DS_Store[m
+[32m+[m[32m.atom/[m
+[32m+[m[32m.build/[m
+[32m+[m[32m.buildlog/[m
+[32m+[m[32m.history[m
+[32m+[m[32m.svn/[m
+[32m+[m[32m.swiftpm/[m
+[32m+[m[32mmigrate_working_dir/[m
+[32m+[m
+[32m+[m[32m# IntelliJ related[m
+[32m+[m[32m*.iml[m
+[32m+[m[32m*.ipr[m
+[32m+[m[32m*.iws[m
+[32m+[m[32m.idea/[m
+[32m+[m
+[32m+[m[32m# The .vscode folder contains launch configuration and tasks you configure in[m
+[32m+[m[32m# VS Code which you may wish to be included in version control, so this line[m
+[32m+[m[32m# is commented out by default.[m
+[32m+[m[32m#.vscode/[m
+[32m+[m
+[32m+[m[32m# Flutter/Dart/Pub related[m
+[32m+[m[32m**/doc/api/[m
+[32m+[m[32m**/ios/Flutter/.last_build_id[m
+[32m+[m[32m.dart_tool/[m
+[32m+[m[32m.flutter-plugins[m
+[32m+[m[32m.flutter-plugins-dependencies[m
+[32m+[m[32m.pub-cache/[m
+[32m+[m[32m.pub/[m
+[32m+[m[32m/build/[m
+[32m+[m
+[32m+[m[32m# Symbolication related[m
+[32m+[m[32mapp.*.symbols[m
+[32m+[m
+[32m+[m[32m# Obfuscation related[m
+[32m+[m[32mapp.*.map.json[m
+[32m+[m
+[32m+[m[32m# Android Studio will place build artifacts here[m
+[32m+[m[32m/android/app/debug[m
+[32m+[m[32m/android/app/profile[m
+[32m+[m[32m/android/app/release[m
+[1mdiff --git a/.metadata b/.metadata[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0edb585[m
+[1m--- /dev/null[m
+[1m+++ b/.metadata[m
+[36m@@ -0,0 +1,45 @@[m
+[32m+[m[32m# This file tracks properties of this Flutter project.[m
+[32m+[m[32m# Used by Flutter tool to assess capabilities and perform upgrades etc.[m
+[32m+[m[32m#[m
+[32m+[m[32m# This file should be version controlled and should not be manually edited.[m
+[32m+[m
+[32m+[m[32mversion:[m
+[32m+[m[32m  revision: "8495dee1fd4aacbe9de707e7581203232f591b2f"[m
+[32m+[m[32m  channel: "stable"[m
+[32m+[m
+[32m+[m[32mproject_type: app[m
+[32m+[m
+[32m+[m[32m# Tracks metadata for the flutter migrate command[m
+[32m+[m[32mmigration:[m
+[32m+[m[32m  platforms:[m
+[32m+[m[32m    - platform: root[m
+[32m+[m[32m      create_revision: 8495dee1fd4aacbe9de707e7581203232f591b2f[m
+[32m+[m[32m      base_revision: 8495dee1fd4aacbe9de707e7581203232f591b2f[m
+[32m+[m[32m    - platform: android[m
+[32m+[m[32m      create_revision: 8495dee1fd4aacbe9de707e7581203232f591b2f[m
+[32m+[m[32m      base_revision: 8495dee1fd4aacbe9de707e7581203232f591b2f[m
+[32m+[m[32m    - platform: ios[m
+[32m+[m[32m      create_revision: 8495dee1fd4aacbe9de707e7581203232f591b2f[m
+[32m+[m[32m      base_revision: 8495dee1fd4aacbe9de707e7581203232f591b2f[m
+[32m+[m[32m    - platform: linux[m
+[32m+[m[32m      create_revision: 8495dee1fd4aacbe9de707e7581203232f591b2f[m
+[32m+[m[32m      base_revision: 8495dee1fd4aacbe9de707e7581203232f591b2f[m
+[32m+[m[32m    - platform: macos[m
+[32m+[m[32m      create_revision: 8495dee1fd4aacbe9de707e7581203232f591b2f[m
+[32m+[m[32m      base_revision: 8495dee1fd4aacbe9de707e7581203232f591b2f[m
+[32m+[m[32m    - platform: web[m
+[32m+[m[32m      create_revision: 8495dee1fd4aacbe9de707e7581203232f591b2f[m
+[32m+[m[32m      base_revision: 8495dee1fd4aacbe9de707e7581203232f591b2f[m
+[32m+[m[32m    - platform: windows[m
+[32m+[m[32m      create_revision: 8495dee1fd4aacbe9de707e7581203232f591b2f[m
+[32m+[m[32m      base_revision: 8495dee1fd4aacbe9de707e7581203232f591b2f[m
+[32m+[m
+[32m+[m[32m  # User provided section[m
+[32m+[m
+[32m+[m[32m  # List of Local paths (relative to this file) that should be[m
+[32m+[m[32m  # ignored by the migrate tool.[m
+[32m+[m[32m  #[m
+[32m+[m[32m  # Files that are not part of the templates will be ignored by default.[m
+[32m+[m[32m  unmanaged_files:[m
+[32m+[m[32m    - 'lib/main.dart'[m
+[32m+[m[32m    - 'ios/Runner.xcodeproj/project.pbxproj'[m
+[1mdiff --git a/README.md b/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2b85f2b[m
+[1m--- /dev/null[m
+[1m+++ b/README.md[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m# myportfolio[m
+[32m+[m
+[32m+[m[32mA new Flutter project.[m
+[32m+[m
+[32m+[m[32m## Getting Started[m
+[32m+[m
+[32m+[m[32mThis project is a starting point for a Flutter application.[m
+[32m+[m
+[32m+[m[32mA few resources to get you started if this is your first Flutter project:[m
+[32m+[m
+[32m+[m[32m- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)[m
+[32m+[m[32m- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)[m
+[32m+[m
+[32m+[m[32mFor help getting started with Flutter development, view the[m
+[32m+[m[32m[online documentation](https://docs.flutter.dev/), which offers tutorials,[m
+[32m+[m[32msamples, guidance on mobile development, and a full API reference.[m
+[1mdiff --git a/analysis_options.yaml b/analysis_options.yaml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0d29021[m
+[1m--- /dev/null[m
+[1m+++ b/analysis_options.yaml[m
+[36m@@ -0,0 +1,28 @@[m
+[32m+[m[32m# This file configures the analyzer, which statically analyzes Dart code to[m
+[32m+[m[32m# check for errors, warnings, and lints.[m
+[32m+[m[32m#[m
+[32m+[m[32m# The issues identified by the analyzer are surfaced in the UI of Dart-enabled[m
+[32m+[m[32m# IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be[m
+[32m+[m[32m# invoked from the command line by running `flutter analyze`.[m
+[32m+[m
+[32m+[m[32m# The following line activates a set of recommended lints for Flutter apps,[m
+[32m+[m[32m# packages, and plugins designed to encourage good coding practices.[m
+[32m+[m[32minclude: package:flutter_lints/flutter.yaml[m
+[32m+[m
+[32m+[m[32mlinter:[m
+[32m+[m[32m  # The lint rules applied to this project can be customized in the[m
+[32m+[m[32m  # section below to disable rules from the `package:flutter_lints/flutter.yaml`[m
+[32m+[m[32m  # included above or to enable additional rules. A list of all available lints[m
+[32m+[m[32m  # and their documentation is published at https://dart.dev/lints.[m
+[32m+[m[32m  #[m
+[32m+[m[32m  # Instead of disabling a lint rule for the entire project in the[m
+[32m+[m[32m  # section below, it can also be suppressed for a single line of code[m
+[32m+[m[32m  # or a specific dart file by using the `// ignore: name_of_lint` and[m
+[32m+[m[32m  # `// ignore_for_file: name_of_lint` syntax on the line or in the file[m
+[32m+[m[32m  # producing the lint.[m
+[32m+[m[32m  rules:[m
+[32m+[m[32m    # avoid_print: false  # Uncomment to disable the `avoid_print` rule[m
+[32m+[m[32m    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule[m
+[32m+[m
+[32m+[m[32m# Additional information about this file can be found at[m
+[32m+[m[32m# https://dart.dev/guides/language/analysis-options[m
+[1mdiff --git a/android/.gitignore b/android/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..55afd91[m
+[1m--- /dev/null[m
+[1m+++ b/android/.gitignore[m
+[36m@@ -0,0 +1,13 @@[m
+[32m+[m[32mgradle-wrapper.jar[m
+[32m+[m[32m/.gradle[m
+[32m+[m[32m/captures/[m
+[32m+[m[32m/gradlew[m
+[32m+[m[32m/gradlew.bat[m
+[32m+[m[32m/local.properties[m
+[32m+[m[32mGeneratedPluginRegistrant.java[m
+[32m+[m
+[32m+[m[32m# Remember to never publicly share your keystore.[m
+[32m+[m[32m# See https://flutter.dev/to/reference-keystore[m
+[32m+[m[32mkey.properties[m
+[32m+[m[32m**/*.keystore[m
+[32m+[m[32m**/*.jks[m
+[1mdiff --git a/android/app/.cxx/Debug/431w4a2n/arm64-v8a/.cmake/api/v1/query/client-agp/cache-v2 b/android/app/.cxx/Debug/431w4a2n/arm64-v8a/.cmake/api/v1/query/client-agp/cache-v2[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/android/app/.cxx/Debug/431w4a2n/arm64-v8a/.cmake/api/v1/query/client-agp/cmakeFiles-v1 b/android/app/.cxx/Debug/431w4a2n/arm64-v8a/.cmake/api/v1/query/client-agp/cmakeFiles-v1[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/android/app/.cxx/Debug/431w4a2n/arm64-v8a/.cmake/api/v1/query/client-agp/codemodel-v2 b/android/app/.cxx/Debug/431w4a2n/arm64-v8a/.cmake/api/v1/query/client-agp/codemodel-v2[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/android/app/.cxx/Debug/431w4a2n/arm64-v8a/.cmake/api/v1/reply/cache-v2-31de2032c6012adbd010.json b/android/app/.cxx/Debug/431w4a2n/arm64-v8a/.cmake/api/v1/reply/cache-v2-31de2032c6012adbd010.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3194302[m
+[1m--- /dev/null[m
+[1m+++ b/android/app/.cxx/Debug/431w4a2n/arm64-v8a/.cmake/api/v1/reply/cache-v2-31de2032c6012adbd010.json[m
+[36m@@ -0,0 +1,1367 @@[m
+[32m+[m[32m{[m
+[32m+[m	[32m"entries" :[m[41m [m
+[32m+[m	[32m[[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "ANDROID_ABI",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "No help, variable specified on the command line."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "UNINITIALIZED",[m
+[32m+[m			[32m"value" : "arm64-v8a"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "ANDROID_NDK",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "No help, variable specified on the command line."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "UNINITIALIZED",[m
+[32m+[m			[32m"value" : "C:\\Users\\shejw\\AppData\\Local\\Android\\sdk\\ndk\\26.3.11579264"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "ANDROID_PLATFORM",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "No help, variable specified on the command line."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "UNINITIALIZED",[m
+[32m+[m			[32m"value" : "android-21"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_ADDR2LINE",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Path to a program."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "FILEPATH",[m
+[32m+[m			[32m"value" : "C:/Users/shejw/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-addr2line.exe"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_ANDROID_ARCH_ABI",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "No help, variable specified on the command line."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "UNINITIALIZED",[m
+[32m+[m			[32m"value" : "arm64-v8a"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_ANDROID_NDK",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "No help, variable specified on the command line."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "UNINITIALIZED",[m
+[32m+[m			[32m"value" : "C:\\Users\\shejw\\AppData\\Local\\Android\\sdk\\ndk\\26.3.11579264"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_AR",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Archiver"[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "FILEPATH",[m
+[32m+[m			[32m"value" : "C:/Users/shejw/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar.exe"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_ASM_FLAGS",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Flags used by the compiler during all build types."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "STRING",[m
+[32m+[m			[32m"value" : ""[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_ASM_FLAGS_DEBUG",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Flags used by the compiler during debug builds."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "STRING",[m
+[32m+[m			[32m"value" : ""[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_ASM_FLAGS_RELEASE",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Flags used by the compiler during release builds."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "STRING",[m
+[32m+[m			[32m"value" : ""[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_BUILD_TYPE",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel ..."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "STRING",[m
+[32m+[m			[32m"value" : "Debug"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CACHEFILE_DIR",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "This is the directory where this CMakeCache.txt was created"[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "INTERNAL",[m
+[32m+[m			[32m"value" : "f:/FOlder/myportfolio/android/app/.cxx/Debug/431w4a2n/arm64-v8a"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CACHE_MAJOR_VERSION",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Major version of cmake used to create the current loaded cache"[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "INTERNAL",[m
+[32m+[m			[32m"value" : "3"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CACHE_MINOR_VERSION",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Minor version of cmake used to create the current loaded cache"[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "INTERNAL",[m
+[32m+[m			[32m"value" : "22"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CACHE_PATCH_VERSION",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Patch version of cmake used to create the current loaded cache"[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "INTERNAL",[m
+[32m+[m			[32m"value" : "1"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_COMMAND",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Path to CMake executable."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "INTERNAL",[m
+[32m+[m			[32m"value" : "C:/Users/shejw/AppData/Local/Android/Sdk/cmake/3.22.1/bin/cmake.exe"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CPACK_COMMAND",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Path to cpack program executable."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "INTERNAL",[m
+[32m+[m			[32m"value" : "C:/Users/shejw/AppData/Local/Android/Sdk/cmake/3.22.1/bin/cpack.exe"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CTEST_COMMAND",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Path to ctest program executable."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "INTERNAL",[m
+[32m+[m			[32m"value" : "C:/Users/shejw/AppData/Local/Android/Sdk/cmake/3.22.1/bin/ctest.exe"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CXX_COMPILER",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "(This variable does not exist and should not be used)"[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "UNINITIALIZED",[m
+[32m+[m			[32m"value" : ""[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CXX_COMPILER_AR",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "LLVM archiver"[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "FILEPATH",[m
+[32m+[m			[32m"value" : "C:/Users/shejw/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar.exe"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CXX_COMPILER_RANLIB",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Generate index for LLVM archive"[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "FILEPATH",[m
+[32m+[m			[32m"value" : "C:/Users/shejw/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ranlib.exe"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CXX_FLAGS",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Flags used by the compiler during all build types."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "STRING",[m
+[32m+[m			[32m"value" : ""[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CXX_FLAGS_DEBUG",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Flags used by the compiler during debug builds."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "STRING",[m
+[32m+[m			[32m"value" : ""[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CXX_FLAGS_MINSIZEREL",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Flags used by the CXX compiler during MINSIZEREL builds."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "STRING",[m
+[32m+[m			[32m"value" : "-Os -DNDEBUG"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CXX_FLAGS_RELEASE",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Flags used by the compiler during release builds."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "STRING",[m
+[32m+[m			[32m"value" : ""[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CXX_FLAGS_RELWITHDEBINFO",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Flags used by the CXX compiler during RELWITHDEBINFO builds."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "STRING",[m
+[32m+[m			[32m"value" : "-O2 -g -DNDEBUG"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_CXX_STANDARD_LIBRARIES",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Libraries linked by default with all C++ applications."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "STRING",[m
+[32m+[m			[32m"value" : "-latomic -lm"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_C_COMPILER",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "(This variable does not exist and should not be used)"[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "UNINITIALIZED",[m
+[32m+[m			[32m"value" : ""[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_C_COMPILER_AR",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "LLVM archiver"[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "FILEPATH",[m
+[32m+[m			[32m"value" : "C:/Users/shejw/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar.exe"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_C_COMPILER_RANLIB",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Generate index for LLVM archive"[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "FILEPATH",[m
+[32m+[m			[32m"value" : "C:/Users/shejw/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ranlib.exe"[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_C_FLAGS",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Flags used by the compiler during all build types."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "STRING",[m
+[32m+[m			[32m"value" : ""[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_C_FLAGS_DEBUG",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Flags used by the compiler during debug builds."[m
+[32m+[m				[32m}[m
+[32m+[m			[32m],[m
+[32m+[m			[32m"type" : "STRING",[m
+[32m+[m			[32m"value" : ""[m
+[32m+[m		[32m},[m
+[32m+[m		[32m{[m
+[32m+[m			[32m"name" : "CMAKE_C_FLAGS_MINSIZEREL",[m
+[32m+[m			[32m"properties" :[m[41m [m
+[32m+[m			[32m[[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "ADVANCED",[m
+[32m+[m					[32m"value" : "1"[m
+[32m+[m				[32m},[m
+[32m+[m				[32m{[m
+[32m+[m					[32m"name" : "HELPSTRING",[m
+[32m+[m					[32m"value" : "Flags used by the C compiler during MINSIZEREL builds
