@@ -8,6 +8,7 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -17,11 +18,19 @@ jobs:
         with:
           flutter-version: "3.x"
 
+      - name: Install Dependencies
+        run: |
+          flutter pub get
+          flutter pub outdated
+
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
+      - name: Verify Firebase CLI
+        run: firebase --version
+
       - name: Build Flutter Web
-        run: flutter build web
+        run: flutter build web --release
 
       - name: Deploy to Firebase
         run: firebase deploy --token "${{ secrets.FIREBASE_TOKEN }}"
