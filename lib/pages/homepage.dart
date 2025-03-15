@@ -3,18 +3,21 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({super.key, required this.featuredHomeKey});
+  const HomePageWidget({super.key, required this.featuredHomeKey, required this.featuredLetsConnectKey, required this.featuredProjectsKey });
   final GlobalKey featuredHomeKey;
+  final GlobalKey featuredLetsConnectKey;
+  final GlobalKey featuredProjectsKey;
   @override
   State<HomePageWidget> createState() => _HomePageWidgetState();
 }
 
 class _HomePageWidgetState extends State<HomePageWidget> {
+
+  final GlobalKey featuredLetsConnectKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-
-
 
     // Dynamic Sizing
     double titleFontSize = screenWidth > 800
@@ -128,7 +131,19 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   alignment: WrapAlignment.start,
                                   children: [
                                     ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        WidgetsBinding.instance.addPostFrameCallback((_) {
+                                          if (widget.featuredLetsConnectKey.currentContext != null) {
+                                            Scrollable.ensureVisible(
+                                              widget.featuredLetsConnectKey.currentContext!,
+                                              duration: Duration(seconds: 1),
+                                              curve: Curves.easeInOut,
+                                            );
+                                          } else {
+                                            debugPrint("❌ Error: featuredLetsConnectKey context is null");
+                                          }
+                                        });
+                                      },
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: const Color(0xFF2563EB),
                                         foregroundColor:  const Color(0xFFFFFFFF),
@@ -148,7 +163,19 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       child: const Text("Get in Touch"),
                                     ),
                                     ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        WidgetsBinding.instance.addPostFrameCallback((_) {
+                                          if (widget.featuredProjectsKey.currentContext != null) {
+                                            Scrollable.ensureVisible(
+                                              widget.featuredProjectsKey.currentContext!,
+                                              duration: Duration(seconds: 1),
+                                              curve: Curves.easeInOut,
+                                            );
+                                          } else {
+                                            debugPrint("❌ Error: featuredProjectsKey context is null");
+                                          }
+                                        });
+                                      },
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: const Color(0xFF1E1E1E),
                                         foregroundColor: const Color(0xFFFFFFFF),

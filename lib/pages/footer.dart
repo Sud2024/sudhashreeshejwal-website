@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart' show FaIcon, FontAwesomeIcons;
+import 'package:font_awesome_flutter/font_awesome_flutter.dart'
+    show FaIcon, FontAwesomeIcons;
 import 'package:url_launcher/url_launcher.dart';
 
 class FooterSection extends StatelessWidget {
-  const FooterSection({super.key});
+  final GlobalKey featuredAboutMeKey;
+  final GlobalKey featuredSkillsAndExpertiseKey;
+  final GlobalKey featuredProjectsKey;
+   const FooterSection({super.key, required this.featuredAboutMeKey, required this.featuredSkillsAndExpertiseKey,required this.featuredProjectsKey,});
 
   void _launchURL(String url) async {
     Uri uri = Uri.parse(url);
@@ -13,7 +17,7 @@ class FooterSection extends StatelessWidget {
       debugPrint("Could not launch $url");
     }
   }
-  
+
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -35,27 +39,27 @@ class FooterSection extends StatelessWidget {
                   // Footer Content
                   isSmallScreen
                       ? Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      _buildPortfolioSection(),
-                      const SizedBox(height: 20),
-                      _buildQuickLinksSection(),
-                      const SizedBox(height: 20),
-                      _buildContactInfoSection(),
-                      const SizedBox(height: 20),
-                      // _buildNewsletterSection(),
-                    ],
-                  )
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            _buildPortfolioSection(),
+                            const SizedBox(height: 20),
+                            _buildQuickLinksSection(),
+                            const SizedBox(height: 20),
+                            _buildContactInfoSection(),
+                            const SizedBox(height: 20),
+                            // _buildNewsletterSection(),
+                          ],
+                        )
                       : Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(child: _buildPortfolioSection()),
-                      Expanded(child: _buildQuickLinksSection()),
-                      Expanded(child: _buildContactInfoSection()),
-                      // Expanded(child: _buildNewsletterSection()),
-                    ],
-                  ),
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Expanded(child: _buildPortfolioSection()),
+                            Expanded(child: _buildQuickLinksSection()),
+                            Expanded(child: _buildContactInfoSection()),
+                            // Expanded(child: _buildNewsletterSection()),
+                          ],
+                        ),
 
                   // Bottom Section
                   const SizedBox(height: 20),
@@ -63,42 +67,74 @@ class FooterSection extends StatelessWidget {
                   const SizedBox(height: 10),
                   isSmallScreen
                       ? Column(
-                    children: [
-                      Text(
-                        "© 2024 Portfolio. All rights reserved.",
-                        style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 12),
-                      ),
-                      const SizedBox(height: 10),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          FooterLink(text: "Privacy Policy"),
-                          SizedBox(width: 10),
-                          FooterLink(text: "Terms of Service"),
-                          SizedBox(width: 10),
-                          FooterLink(text: "Cookies Policy"),
-                        ],
-                      ),
-                    ],
-                  )
+                          children: [
+                            Text(
+                              "© 2024 Portfolio. All rights reserved.",
+                              style: TextStyle(
+                                  color: Color(0xFF9E9E9E), fontSize: 12),
+                            ),
+                            const SizedBox(height: 10),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                FooterLink(
+                                  text: "Privacy Policy",
+                                  onTap: () {
+                                    print("Privacy Policy Clicked");
+                                  },
+                                ),
+                                SizedBox(width: 10),
+                                FooterLink(
+                                  text: "Terms of Service",
+                                  onTap: () {
+                                    print("Privacy Policy Clicked");
+                                  },
+                                ),
+                                SizedBox(width: 10),
+                                FooterLink(
+                                  text: "Cookies Policy",
+                                  onTap: () {
+                                    print("Privacy Policy Clicked");
+                                  },
+                                ),
+                              ],
+                            ),
+                          ],
+                        )
                       : Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "© 2024 Portfolio. All rights reserved.",
-                        style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 12),
-                      ),
-                      Row(
-                        children: [
-                          FooterLink(text: "Privacy Policy"),
-                          SizedBox(width: 10),
-                          FooterLink(text: "Terms of Service"),
-                          SizedBox(width: 10),
-                          FooterLink(text: "Cookies Policy"),
-                        ],
-                      ),
-                    ],
-                  ),
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "© 2024 Portfolio. All rights reserved.",
+                              style: TextStyle(
+                                  color: Color(0xFF9E9E9E), fontSize: 12),
+                            ),
+                            Row(
+                              children: [
+                                FooterLink(
+                                  text: "Privacy Policy",
+                                  onTap: () {
+                                    print("Privacy Policy Clicked");
+                                  },
+                                ),
+                                SizedBox(width: 10),
+                                FooterLink(
+                                  text: "Terms of Service",
+                                  onTap: () {
+                                    print("Privacy Policy Clicked");
+                                  },
+                                ),
+                                SizedBox(width: 10),
+                                FooterLink(
+                                  text: "Cookies Policy",
+                                  onTap: () {
+                                    print("Privacy Policy Clicked");
+                                  },
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                 ],
               ),
             ),
@@ -132,11 +168,18 @@ class FooterSection extends StatelessWidget {
         Row(
           children: [
             IconButton(
-              onPressed: () {_launchURL("https://www.linkedin.com/in/sudhashree-shejwal/");},
-              icon: FaIcon(FontAwesomeIcons.linkedin, color: Color(0xFF9E9E9E),),
+              onPressed: () {
+                _launchURL("https://www.linkedin.com/in/sudhashree-shejwal/");
+              },
+              icon: FaIcon(
+                FontAwesomeIcons.linkedin,
+                color: Color(0xFF9E9E9E),
+              ),
             ),
             IconButton(
-              onPressed: () {_launchURL("https://github.com/Sud2024");},
+              onPressed: () {
+                _launchURL("https://github.com/Sud2024");
+              },
               icon: FaIcon(FontAwesomeIcons.github, color: Color(0xFF9E9E9E)),
             ),
           ],
@@ -158,9 +201,36 @@ class FooterSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        FooterLink(text: "About Me"),
-        FooterLink(text: "Projects"),
-        FooterLink(text: "Skills"),
+        FooterLink(
+          text: "About Me",
+          onTap: () {
+            Scrollable.ensureVisible(
+              featuredAboutMeKey.currentContext!,
+              duration: Duration(seconds: 1),
+              curve: Curves.easeInOut,
+            );
+          },
+        ),
+        FooterLink(
+          text: "Projects",
+          onTap: () {
+            Scrollable.ensureVisible(
+              featuredProjectsKey.currentContext!,
+              duration: Duration(seconds: 1),
+              curve: Curves.easeInOut,
+            );
+          },
+        ),
+        FooterLink(
+          text: "Skills",
+          onTap: () {
+            Scrollable.ensureVisible(
+              featuredSkillsAndExpertiseKey.currentContext!,
+              duration: Duration(seconds: 1),
+              curve: Curves.easeInOut,
+            );
+          },
+        ),
         // Bottomline()
       ],
     );
@@ -249,16 +319,22 @@ class FooterSection extends StatelessWidget {
 
 class FooterLink extends StatelessWidget {
   final String text;
-  const FooterLink({required this.text, super.key});
+  final VoidCallback onTap;
+
+  const FooterLink({required this.text, required this.onTap, super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4.0),
-      child: Text(
-        text,
-        style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 14),
+    return InkWell(
+      onTap: onTap, // Call the function when tapped
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 4.0),
+        child: Text(
+          text,
+          style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 14),
+        ),
       ),
     );
   }
 }
+

@@ -68,7 +68,7 @@ class _LetsConnectState extends State<LetsConnect> {
     }
 
     final url = Uri.parse('https://api.brevo.com/v3/smtp/email');
-    final String apiKey = "xkeysib-6d272dc861f72ea6ea001a2c602fd8c4597461b509fb003ca252511eff383c90-XBzDHuM5FoYFGFs"; // 🔥 Replace with actual API key
+    final String apiKey =Secrets.sendinblueApiKey; // 🔥 Replace with actual API key
 
     // 📩 Email sent to YOU (Sudhashree)
     final Map<String, dynamic> bodyToMe = {
@@ -317,6 +317,7 @@ class _LetsConnectState extends State<LetsConnect> {
         TextField(
           controller: controller,
           style: TextStyle(color: Colors.white),
+          cursorColor: Colors.white,
           decoration: InputDecoration(
             hintText: hint,
             hintStyle: TextStyle(color: const Color(0xFF949BA6)),
@@ -347,6 +348,8 @@ class _LetsConnectState extends State<LetsConnect> {
         Text(label, style: TextStyle(color: Colors.white)),
         const SizedBox(height: 4),
         TextField(
+          cursorColor: Colors.white,
+          style: TextStyle(color: Colors.white),
           controller: controller,
           maxLines: 5,
           decoration: InputDecoration(

@@ -64,6 +64,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
       backgroundColor: const Color(0xFF1E1E1E),
       appBar: AppBar(
         backgroundColor: const Color(0xFF1E1E1E),
+        iconTheme: const IconThemeData(color: Colors.white),
         title: Padding(
           padding: const EdgeInsets.only(left: 10.0),
           child: Row(
@@ -174,6 +175,11 @@ class _MyPortfolioState extends State<MyPortfolio> {
                     title: "Home",
                     onTap: () {
                       // Handle navigation
+                      Scrollable.ensureVisible(
+                        featuredHomeKey.currentContext!,
+                        duration: Duration(seconds: 1),
+                        curve: Curves.easeInOut,
+                      );
                       Navigator.pop(context);
                     },
                   ),
@@ -182,6 +188,11 @@ class _MyPortfolioState extends State<MyPortfolio> {
                     title: "About",
                     onTap: () {
                       // Handle navigation
+                      Scrollable.ensureVisible(
+                        featuredAboutMeKey.currentContext!,
+                        duration: Duration(seconds: 1),
+                        curve: Curves.easeInOut,
+                      );
                       Navigator.pop(context);
                     },
                   ),
@@ -190,6 +201,11 @@ class _MyPortfolioState extends State<MyPortfolio> {
                     title: "Projects",
                     onTap: () {
                       // Handle navigation
+                      Scrollable.ensureVisible(
+                        featuredProjectsKey.currentContext!,
+                        duration: Duration(seconds: 1),
+                        curve: Curves.easeInOut,
+                      );
                       Navigator.pop(context);
                     },
                   ),
@@ -197,7 +213,11 @@ class _MyPortfolioState extends State<MyPortfolio> {
                     icon: Icons.school_outlined,
                     title: "Skills",
                     onTap: () {
-                      // Handle navigation
+                      Scrollable.ensureVisible(
+                        featuredSkillsAndExpertiseKey.currentContext!,
+                        duration: Duration(seconds: 1),
+                        curve: Curves.easeInOut,
+                      );
                       Navigator.pop(context);
                     },
                   ),
@@ -205,7 +225,11 @@ class _MyPortfolioState extends State<MyPortfolio> {
                     icon: Icons.history_edu,
                     title: "Experience",
                     onTap: () {
-                      // Handle navigation
+                      Scrollable.ensureVisible(
+                        featuredExperienceKey.currentContext!,
+                        duration: Duration(seconds: 1),
+                        curve: Curves.easeInOut,
+                      );
                       Navigator.pop(context);
                     },
                   ),
@@ -214,6 +238,11 @@ class _MyPortfolioState extends State<MyPortfolio> {
                     title: "Contact",
                     onTap: () {
                       // Handle navigation
+                      Scrollable.ensureVisible(
+                        featuredLetsConnectKey.currentContext!,
+                        duration: Duration(seconds: 1),
+                        curve: Curves.easeInOut,
+                      );
                       Navigator.pop(context);
                     },
                   ),
@@ -250,7 +279,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
                       thickness: 1.0,
                       height: 1.0,
                     ),
-                    HomePageWidget(featuredHomeKey: featuredHomeKey),
+                    HomePageWidget(featuredHomeKey: featuredHomeKey, featuredLetsConnectKey: featuredLetsConnectKey, featuredProjectsKey: featuredProjectsKey, ),
                     AboutMe(featuredAboutMeKey: featuredAboutMeKey),
                     FeaturedProjects(featuredProjectsKey: featuredProjectsKey),
                     Skillsandexpertise(featuredSkillsAndExpertiseKey: featuredSkillsAndExpertiseKey),
@@ -258,7 +287,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
                     EducationBackground(),
                     // BlogsAndInsights(),
                     LetsConnect(featuredLetsConnectKey: featuredLetsConnectKey),
-                    FooterSection(),
+                    FooterSection(featuredAboutMeKey: featuredAboutMeKey, featuredProjectsKey: featuredProjectsKey, featuredSkillsAndExpertiseKey: featuredSkillsAndExpertiseKey,),
                     Bottomline(),
                   ],
                 ),
