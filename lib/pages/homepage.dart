@@ -272,7 +272,19 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             alignment: WrapAlignment.center,
                             children: [
                               ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  WidgetsBinding.instance.addPostFrameCallback((_) {
+                                    if (widget.featuredLetsConnectKey.currentContext != null) {
+                                      Scrollable.ensureVisible(
+                                        widget.featuredLetsConnectKey.currentContext!,
+                                        duration: Duration(seconds: 1),
+                                        curve: Curves.easeInOut,
+                                      );
+                                    } else {
+                                      debugPrint("❌ Error: featuredLetsConnectKey context is null");
+                                    }
+                                  });
+                                },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.blue,
                                   foregroundColor: Colors.white,
@@ -291,7 +303,19 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 child: const Text("Get in Touch"),
                               ),
                               ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  WidgetsBinding.instance.addPostFrameCallback((_) {
+                                    if (widget.featuredProjectsKey.currentContext != null) {
+                                      Scrollable.ensureVisible(
+                                        widget.featuredProjectsKey.currentContext!,
+                                        duration: Duration(seconds: 1),
+                                        curve: Curves.easeInOut,
+                                      );
+                                    } else {
+                                      debugPrint("❌ Error: featuredProjectsKey context is null");
+                                    }
+                                  });
+                                },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.black,
                                   foregroundColor: Colors.white,
