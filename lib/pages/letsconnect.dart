@@ -150,7 +150,7 @@ class _LetsConnectState extends State<LetsConnect> {
                 AlertDialog(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                  backgroundColor: Colors.white30,
+                  backgroundColor: const Color(0xFF1E1E1E),
                   content: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -165,10 +165,22 @@ class _LetsConnectState extends State<LetsConnect> {
                       ),
                       SizedBox(height: 20),
                       ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blueAccent,
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 24, vertical: 12),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
                         onPressed: () {
-                          Navigator.pop(context); // Close dialog
+                          Navigator.pop(context);
                         },
-                        child: Text("Return to Website", style: TextStyle(color: Colors.white, backgroundColor: Colors.black),),
+                        child: Text(
+                          'Return to Website',
+                          style:
+                          TextStyle(color: Colors.white, fontSize: 16),
+                        ),
                       ),
                     ],
                   ),
