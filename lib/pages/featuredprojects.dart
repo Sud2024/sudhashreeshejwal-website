@@ -230,7 +230,7 @@ const List<Project> projectList = [
         "The My Portfolio website showcases your skills, experience, and projects, providing a professional online presence to highlight your expertise and work.",
     technologies: ["Framework: Flutter", "Language: Dart"],
     hasAccess: true,
-    projectUrl: "https://github.com/Sud2024/CRUD-Operations",
+    projectUrl: "https://github.com/Sud2024/sudhashreeshejwal-website",
     imagePath: "assets/myportfolio.webp",
   ),
 ];
