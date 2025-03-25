@@ -11,6 +11,7 @@ import 'package:myportfolio/pages/footer.dart';
 import 'package:myportfolio/pages/homepage.dart';
 import 'package:myportfolio/pages/letsconnect.dart';
 import 'package:myportfolio/pages/skillsandexpertise.dart';
+import 'package:myportfolio/pages/testimonials.dart';
 
 class MyPortfolio extends StatefulWidget {
   const MyPortfolio({super.key});
@@ -287,6 +288,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
                     Skillsandexpertise(featuredSkillsAndExpertiseKey: featuredSkillsAndExpertiseKey),
                     Experience(featuredExperienceKey: featuredExperienceKey),
                     EducationBackground(),
+                    TestimonialsPage(),
                     // BlogsAndInsights(),
                     LetsConnect(featuredLetsConnectKey: featuredLetsConnectKey),
                     FooterSection(featuredAboutMeKey: featuredAboutMeKey, featuredProjectsKey: featuredProjectsKey, featuredSkillsAndExpertiseKey: featuredSkillsAndExpertiseKey,),
