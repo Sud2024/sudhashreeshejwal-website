@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:universal_html/html.dart' as html;
+import 'package:flutter/foundation.dart' show kIsWeb;
+import 'dart:io' show File;
+import 'package:http/http.dart' as http;
+import 'package:path_provider/path_provider.dart';
 
 class Experience extends StatefulWidget {
   final GlobalKey featuredExperienceKey;
@@ -9,11 +13,38 @@ class Experience extends StatefulWidget {
 }
 
 class _ExperienceState extends State<Experience> {
-  void downloadResume() {
-    final String url = 'assets/resume.pdf';
-    html.AnchorElement(href: url)
-      ..setAttribute('download', 'CV_Sudhashree Shejwal.pdf')
-      ..click();  // ✅ Triggers the download
+  // void downloadResume() {
+  //   final String url = 'assets/resume.pdf';
+  //   html.AnchorElement(href: url)
+  //     ..setAttribute('download', 'CV_Sudhashree Shejwal.pdf')
+  //     ..click();  // ✅ Triggers the download
+  // }
+
+  Future<void> downloadResume() async {
+    String url = "https://drive.google.com/uc?export=download&id=1jDsu9HKQ-RW8EHy-k7jKEDEYgjTvPyh6";
+    String fileName = "downloaded_file.pdf";
+
+    if (kIsWeb) {
+      // ✅ Web Browser: Trigger browser download
+      html.AnchorElement anchorElement = html.AnchorElement(href: url)
+        ..setAttribute("download", fileName)
+        ..click();
+      print("Downloading in Web Browser...");
+    } else {
+      // ✅ Mobile/Desktop: Use HTTP to download and save
+      try {
+        var response = await http.get(Uri.parse(url));
+        final directory = await getApplicationDocumentsDirectory();
+        String filePath = "${directory.path}/$fileName";
+
+        File file = File(filePath);
+        await file.writeAsBytes(response.bodyBytes);
+
+        print("File saved at: $filePath");
+      } catch (e) {
+        print("Error downloading file: $e");
+      }
+    }
   }
 
   @override

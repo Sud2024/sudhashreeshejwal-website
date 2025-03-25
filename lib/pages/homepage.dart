@@ -3,7 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({super.key, required this.featuredHomeKey, required this.featuredLetsConnectKey, required this.featuredProjectsKey });
+  const HomePageWidget(
+      {super.key,
+      required this.featuredHomeKey,
+      required this.featuredLetsConnectKey,
+      required this.featuredProjectsKey});
   final GlobalKey featuredHomeKey;
   final GlobalKey featuredLetsConnectKey;
   final GlobalKey featuredProjectsKey;
@@ -12,7 +16,6 @@ class HomePageWidget extends StatefulWidget {
 }
 
 class _HomePageWidgetState extends State<HomePageWidget> {
-
   final GlobalKey featuredLetsConnectKey = GlobalKey();
 
   @override
@@ -123,7 +126,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                 ),
 
                                 const SizedBox(height: 20),
-
                                 // Buttons
                                 Wrap(
                                   spacing: 12,
@@ -132,21 +134,28 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   children: [
                                     ElevatedButton(
                                       onPressed: () {
-                                        WidgetsBinding.instance.addPostFrameCallback((_) {
-                                          if (widget.featuredLetsConnectKey.currentContext != null) {
+                                        WidgetsBinding.instance
+                                            .addPostFrameCallback((_) {
+                                          if (widget.featuredLetsConnectKey
+                                                  .currentContext !=
+                                              null) {
                                             Scrollable.ensureVisible(
-                                              widget.featuredLetsConnectKey.currentContext!,
+                                              widget.featuredLetsConnectKey
+                                                  .currentContext!,
                                               duration: Duration(seconds: 1),
                                               curve: Curves.easeInOut,
                                             );
                                           } else {
-                                            debugPrint("❌ Error: featuredLetsConnectKey context is null");
+                                            debugPrint(
+                                                "❌ Error: featuredLetsConnectKey context is null");
                                           }
                                         });
                                       },
                                       style: ElevatedButton.styleFrom(
-                                        backgroundColor: const Color(0xFF2563EB),
-                                        foregroundColor:  const Color(0xFFFFFFFF),
+                                        backgroundColor:
+                                            const Color(0xFF2563EB),
+                                        foregroundColor:
+                                            const Color(0xFFFFFFFF),
                                         shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(8),
@@ -164,26 +173,34 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     ),
                                     ElevatedButton(
                                       onPressed: () {
-                                        WidgetsBinding.instance.addPostFrameCallback((_) {
-                                          if (widget.featuredProjectsKey.currentContext != null) {
+                                        WidgetsBinding.instance
+                                            .addPostFrameCallback((_) {
+                                          if (widget.featuredProjectsKey
+                                                  .currentContext !=
+                                              null) {
                                             Scrollable.ensureVisible(
-                                              widget.featuredProjectsKey.currentContext!,
+                                              widget.featuredProjectsKey
+                                                  .currentContext!,
                                               duration: Duration(seconds: 1),
                                               curve: Curves.easeInOut,
                                             );
                                           } else {
-                                            debugPrint("❌ Error: featuredProjectsKey context is null");
+                                            debugPrint(
+                                                "❌ Error: featuredProjectsKey context is null");
                                           }
                                         });
                                       },
                                       style: ElevatedButton.styleFrom(
-                                        backgroundColor: const Color(0xFF1E1E1E),
-                                        foregroundColor: const Color(0xFFFFFFFF),
+                                        backgroundColor:
+                                            const Color(0xFF1E1E1E),
+                                        foregroundColor:
+                                            const Color(0xFFFFFFFF),
                                         shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(8),
                                           side: const BorderSide(
-                                              color: Color(0xFF4B4B4B), width: 2),
+                                              color: Color(0xFF4B4B4B),
+                                              width: 2),
                                         ),
                                         textStyle: GoogleFonts.nunito(
                                           fontSize: buttonFontSize,
@@ -273,15 +290,20 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             children: [
                               ElevatedButton(
                                 onPressed: () {
-                                  WidgetsBinding.instance.addPostFrameCallback((_) {
-                                    if (widget.featuredLetsConnectKey.currentContext != null) {
+                                  WidgetsBinding.instance
+                                      .addPostFrameCallback((_) {
+                                    if (widget.featuredLetsConnectKey
+                                            .currentContext !=
+                                        null) {
                                       Scrollable.ensureVisible(
-                                        widget.featuredLetsConnectKey.currentContext!,
+                                        widget.featuredLetsConnectKey
+                                            .currentContext!,
                                         duration: Duration(seconds: 1),
                                         curve: Curves.easeInOut,
                                       );
                                     } else {
-                                      debugPrint("❌ Error: featuredLetsConnectKey context is null");
+                                      debugPrint(
+                                          "❌ Error: featuredLetsConnectKey context is null");
                                     }
                                   });
                                 },
@@ -304,15 +326,20 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               ),
                               ElevatedButton(
                                 onPressed: () {
-                                  WidgetsBinding.instance.addPostFrameCallback((_) {
-                                    if (widget.featuredProjectsKey.currentContext != null) {
+                                  WidgetsBinding.instance
+                                      .addPostFrameCallback((_) {
+                                    if (widget.featuredProjectsKey
+                                            .currentContext !=
+                                        null) {
                                       Scrollable.ensureVisible(
-                                        widget.featuredProjectsKey.currentContext!,
+                                        widget.featuredProjectsKey
+                                            .currentContext!,
                                         duration: Duration(seconds: 1),
                                         curve: Curves.easeInOut,
                                       );
                                     } else {
-                                      debugPrint("❌ Error: featuredProjectsKey context is null");
+                                      debugPrint(
+                                          "❌ Error: featuredProjectsKey context is null");
                                     }
                                   });
                                 },
