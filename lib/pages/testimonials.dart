@@ -158,7 +158,7 @@ List<Testimonial> testimonials = [
     name: "Deepak Patil",
     position: "SDE, StandardWings Technologies",
     feedback:
-    "You did a great job with confidence and clarity. With more real-world application, you’ll excel even further. Keep refining your skills for greater success!",
+    "Working with you has been a great experience. Your confidence and clarity are truly impressive. With more real-world application, I have no doubt you'll reach even greater heights. Keep sharpening your skills—your success story is just getting started!",
     initials: "DP",
   ),
 ];
