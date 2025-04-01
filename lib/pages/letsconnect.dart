@@ -68,7 +68,8 @@ class _LetsConnectState extends State<LetsConnect> {
     }
 
     final url = Uri.parse('https://api.brevo.com/v3/smtp/email');
-    final String apiKey =Secrets.sendinblueApiKey; // 🔥 Replace with actual API key
+    final String apiKey =
+        Secrets.sendinblueApiKey; // 🔥 Replace with actual API key
 
     // 📩 Email sent to YOU (Sudhashree)
     final Map<String, dynamic> bodyToMe = {
@@ -160,8 +161,10 @@ class _LetsConnectState extends State<LetsConnect> {
                       Text(
                         "A mail is sent successfully to you and Sudhashree Shejwal!",
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.white,
-                            fontSize: 16, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
                       ),
                       SizedBox(height: 20),
                       ElevatedButton(
@@ -178,8 +181,7 @@ class _LetsConnectState extends State<LetsConnect> {
                         },
                         child: Text(
                           'Return to Website',
-                          style:
-                          TextStyle(color: Colors.white, fontSize: 16),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       ),
                     ],
@@ -339,11 +341,13 @@ class _LetsConnectState extends State<LetsConnect> {
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(color: Colors.grey), // Border color when not focused
+              borderSide: BorderSide(
+                  color: Colors.grey), // Border color when not focused
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(color: Colors.blue, width: 2), // Border color when focused
+              borderSide: BorderSide(
+                  color: Colors.blue, width: 2), // Border color when focused
             ),
             filled: true,
             fillColor: const Color(0xFF2F2F2F),
@@ -353,7 +357,8 @@ class _LetsConnectState extends State<LetsConnect> {
     );
   }
 
-  Widget _buildTextArea(String label, String hint, TextEditingController controller) {
+  Widget _buildTextArea(
+      String label, String hint, TextEditingController controller) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -373,11 +378,13 @@ class _LetsConnectState extends State<LetsConnect> {
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(color: Colors.grey), // Border color when not focused
+              borderSide: BorderSide(
+                  color: Colors.grey), // Border color when not focused
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(color: Colors.blue, width: 2), // Border color when focused
+              borderSide: BorderSide(
+                  color: Colors.blue, width: 2), // Border color when focused
             ),
             filled: true,
             fillColor: const Color(0xFF2F2F2F),
@@ -451,8 +458,8 @@ class _LetsConnectState extends State<LetsConnect> {
         children: [
           CircleAvatar(
             radius: 22,
-            backgroundColor: Colors.blue.shade900,
-            child: Icon(icon, color: Colors.blue, size: 24),
+            backgroundColor: Colors.blueAccent,
+            child: Icon(icon, color: Colors.white, size: 24),
           ),
           const SizedBox(width: 15),
           Expanded(

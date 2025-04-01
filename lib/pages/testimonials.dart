@@ -32,8 +32,8 @@ class TestimonialsPage extends StatelessWidget {
                 int columns = constraints.maxWidth > 900
                     ? 3
                     : constraints.maxWidth > 600
-                    ? 2
-                    : 1;
+                        ? 2
+                        : 1;
 
                 return GridView.builder(
                   shrinkWrap: true,
@@ -122,7 +122,8 @@ class TestimonialCard extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
-                      fontSize: MediaQuery.of(context).size.width < 400 ? 14 : 16,
+                      fontSize:
+                          MediaQuery.of(context).size.width < 400 ? 14 : 16,
                     ),
                   ),
                   Text(
@@ -158,7 +159,7 @@ List<Testimonial> testimonials = [
     name: "Deepak Patil",
     position: "SDE, StandardWings Technologies",
     feedback:
-    "Working with you has been a great experience. Your confidence and clarity are truly impressive. With more real-world application, I have no doubt you'll reach even greater heights. Keep sharpening your skills—your success story is just getting started!",
+        "Working with you has been a great experience. Your confidence and clarity are truly impressive. With more real-world application, I have no doubt you'll reach even greater heights. Keep sharpening your skills—your success story is just getting started!",
     initials: "DP",
   ),
 ];

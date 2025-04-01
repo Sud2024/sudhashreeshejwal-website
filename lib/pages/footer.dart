@@ -7,7 +7,12 @@ class FooterSection extends StatelessWidget {
   final GlobalKey featuredAboutMeKey;
   final GlobalKey featuredSkillsAndExpertiseKey;
   final GlobalKey featuredProjectsKey;
-   const FooterSection({super.key, required this.featuredAboutMeKey, required this.featuredSkillsAndExpertiseKey,required this.featuredProjectsKey,});
+  const FooterSection({
+    super.key,
+    required this.featuredAboutMeKey,
+    required this.featuredSkillsAndExpertiseKey,
+    required this.featuredProjectsKey,
+  });
 
   void _launchURL(String url) async {
     Uri uri = Uri.parse(url);
@@ -69,70 +74,69 @@ class FooterSection extends StatelessWidget {
                       ? Column(
                           children: [
                             Text(
-                              "© 2024 Portfolio. All rights reserved.",
+                              "© 2024 Sudhashree Shejwal. All rights reserved.",
                               style: TextStyle(
                                   color: Color(0xFF9E9E9E), fontSize: 12),
                             ),
-                            const SizedBox(height: 10),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                FooterLink(
-                                  text: "Privacy Policy",
-                                  onTap: () {
-                                    print("Privacy Policy Clicked");
-                                  },
-                                ),
-                                SizedBox(width: 10),
-                                FooterLink(
-                                  text: "Terms of Service",
-                                  onTap: () {
-                                    print("Privacy Policy Clicked");
-                                  },
-                                ),
-                                SizedBox(width: 10),
-                                FooterLink(
-                                  text: "Cookies Policy",
-                                  onTap: () {
-                                    print("Privacy Policy Clicked");
-                                  },
-                                ),
-                              ],
-                            ),
+                            // Row(
+                            //   mainAxisAlignment: MainAxisAlignment.center,
+                            //   children: [
+                            //     FooterLink(
+                            //       text: "Privacy Policy",
+                            //       onTap: () {
+                            //         print("Privacy Policy Clicked");
+                            //       },
+                            //     ),
+                            //     SizedBox(width: 10),
+                            //     FooterLink(
+                            //       text: "Terms of Service",
+                            //       onTap: () {
+                            //         print("Privacy Policy Clicked");
+                            //       },
+                            //     ),
+                            //     SizedBox(width: 10),
+                            //     FooterLink(
+                            //       text: "Cookies Policy",
+                            //       onTap: () {
+                            //         print("Privacy Policy Clicked");
+                            //       },
+                            //     ),
+                            //   ],
+                            // ),
                           ],
                         )
                       : Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "© 2024 Portfolio. All rights reserved.",
+                              "© 2024 Sudhashree Shejwal. All rights reserved.",
                               style: TextStyle(
                                   color: Color(0xFF9E9E9E), fontSize: 12),
                             ),
-                            Row(
-                              children: [
-                                FooterLink(
-                                  text: "Privacy Policy",
-                                  onTap: () {
-                                    print("Privacy Policy Clicked");
-                                  },
-                                ),
-                                SizedBox(width: 10),
-                                FooterLink(
-                                  text: "Terms of Service",
-                                  onTap: () {
-                                    print("Privacy Policy Clicked");
-                                  },
-                                ),
-                                SizedBox(width: 10),
-                                FooterLink(
-                                  text: "Cookies Policy",
-                                  onTap: () {
-                                    print("Privacy Policy Clicked");
-                                  },
-                                ),
-                              ],
-                            ),
+                            // Row(
+                            //   children: [
+                            //     FooterLink(
+                            //       text: "Privacy Policy",
+                            //       onTap: () {
+                            //         print("Privacy Policy Clicked");
+                            //       },
+                            //     ),
+                            //     SizedBox(width: 10),
+                            //     FooterLink(
+                            //       text: "Terms of Service",
+                            //       onTap: () {
+                            //         print("Terms and Conditions Clicked");
+                            //       },
+                            //     ),
+                            //     SizedBox(width: 10),
+                            //     FooterLink(
+                            //       text: "Cookies Policy",
+                            //       onTap: () {
+                            //         print("Cookies Policy Clicked");
+                            //       },
+                            //     ),
+                            //   ],
+                            // ),
                           ],
                         ),
                 ],
@@ -337,4 +341,3 @@ class FooterLink extends StatelessWidget {
     );
   }
 }
-

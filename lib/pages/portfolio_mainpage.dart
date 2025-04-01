@@ -158,8 +158,6 @@ class _MyPortfolioState extends State<MyPortfolio> {
                           );
                         },
                       ),
-                      
-
                     ],
                   ),
                 ),
@@ -281,16 +279,27 @@ class _MyPortfolioState extends State<MyPortfolio> {
                       thickness: 1.0,
                       height: 1.0,
                     ),
-                    HomePageWidget(featuredHomeKey: featuredHomeKey, featuredLetsConnectKey: featuredLetsConnectKey, featuredProjectsKey: featuredProjectsKey, ),
+                    HomePageWidget(
+                      featuredHomeKey: featuredHomeKey,
+                      featuredLetsConnectKey: featuredLetsConnectKey,
+                      featuredProjectsKey: featuredProjectsKey,
+                    ),
                     AboutMe(featuredAboutMeKey: featuredAboutMeKey),
                     FeaturedProjects(featuredProjectsKey: featuredProjectsKey),
-                    Skillsandexpertise(featuredSkillsAndExpertiseKey: featuredSkillsAndExpertiseKey),
+                    Skillsandexpertise(
+                        featuredSkillsAndExpertiseKey:
+                            featuredSkillsAndExpertiseKey),
                     Experience(featuredExperienceKey: featuredExperienceKey),
                     EducationBackground(),
                     // TestimonialsPage(),
                     // BlogsAndInsights(),
                     LetsConnect(featuredLetsConnectKey: featuredLetsConnectKey),
-                    FooterSection(featuredAboutMeKey: featuredAboutMeKey, featuredProjectsKey: featuredProjectsKey, featuredSkillsAndExpertiseKey: featuredSkillsAndExpertiseKey,),
+                    FooterSection(
+                      featuredAboutMeKey: featuredAboutMeKey,
+                      featuredProjectsKey: featuredProjectsKey,
+                      featuredSkillsAndExpertiseKey:
+                          featuredSkillsAndExpertiseKey,
+                    ),
                     Bottomline(),
                   ],
                 ),

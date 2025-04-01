@@ -7,18 +7,32 @@ class EducationBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Certification> certifications = [
-      Certification(title: 'AI Tools Workshop', provider: 'be10x', year: '2025'),
-      Certification(title: 'Certified Flutter Development Course', provider: 'Udemy', year: '2023'),
-      Certification(title: 'Certified Java Full Stack Development', provider: 'Profound Edutech', year: '2022'),
-      Certification(title: 'iOS Beginner Training', provider: 'Code with Chris (Youtuber)', year: '2020'),
-      Certification(title: 'Certified ASP.NET developer using C#', provider: 'IANT Institute ', year: '2019'),
+      Certification(
+          title: 'AI Tools Workshop', provider: 'be10x', year: '2025'),
+      Certification(
+          title: 'Certified Flutter Development Course',
+          provider: 'Udemy',
+          year: '2023'),
+      Certification(
+          title: 'Certified Java Full Stack Development',
+          provider: 'Profound Edutech',
+          year: '2022'),
+      Certification(
+          title: 'iOS Beginner Training',
+          provider: 'Code with Chris (Youtuber)',
+          year: '2020'),
+      Certification(
+          title: 'Certified ASP.NET developer using C#',
+          provider: 'IANT Institute ',
+          year: '2019'),
     ];
 
     return LayoutBuilder(
       builder: (context, constraints) {
         return Container(
           color: const Color(0xFF171717),
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: constraints.maxWidth > 600 ? 32 : 16),
+          padding: EdgeInsets.symmetric(
+              vertical: 20, horizontal: constraints.maxWidth > 600 ? 32 : 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -51,7 +65,8 @@ class EducationBackground extends StatelessWidget {
       padding: const EdgeInsets.only(left: 8.0),
       child: Text(
         text,
-        style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+        style: const TextStyle(
+            color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
       ),
     );
   }
@@ -66,9 +81,10 @@ class EducationBackground extends StatelessWidget {
 
     return isWideScreen
         ? Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: educationCards.map((card) => Expanded(child: card)).toList(),
-    )
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children:
+                educationCards.map((card) => Expanded(child: card)).toList(),
+          )
         : Column(children: educationCards);
   }
 
@@ -78,16 +94,25 @@ class EducationBackground extends StatelessWidget {
         title: "Master of Science in Computer Science",
         institution: "Savitribai Phule Pune University",
         duration: "2019 - 2021",
-        description: "Gained advanced knowledge in algorithms, AI, distributed systems, cloud computing, and research methodologies.",
-        details: ["GPA: 3.32/4.0", "Interned at Engeniuspark Technologies Pvt Ltd", "Developed a project to help COVID patients monitor their temperature."],
+        description:
+            "Gained advanced knowledge in algorithms, AI, distributed systems, cloud computing, and research methodologies.",
+        details: [
+          "GPA: 3.32/4.0",
+          "Interned at Engeniuspark Technologies Pvt Ltd",
+          "Developed a project to help COVID patients monitor their temperature."
+        ],
         icon: FontAwesomeIcons.graduationCap,
       ),
       _buildEducationCard(
         title: "Bachelor of Science in Computer Science",
         institution: "Savitribai Phule Pune University",
         duration: "2016 - 2019",
-        description: "Built a strong foundation in programming, data structures, databases, operating systems, and computer networks.",
-        details: ["GPA: 3.0/4.0", "Built a system for students to download receipts after clerks process their forms."],
+        description:
+            "Built a strong foundation in programming, data structures, databases, operating systems, and computer networks.",
+        details: [
+          "GPA: 3.0/4.0",
+          "Built a system for students to download receipts after clerks process their forms."
+        ],
         icon: FontAwesomeIcons.buildingColumns,
       ),
     ];
@@ -103,8 +128,10 @@ class EducationBackground extends StatelessWidget {
   }) {
     return Card(
       elevation: 6,
-      shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20),
-        side: const BorderSide(color: Color(0xFF353535), width: 2),),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+        side: const BorderSide(color: Color(0xFF353535), width: 2),
+      ),
       color: const Color(0xFF1E1E1E),
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -113,28 +140,48 @@ class EducationBackground extends StatelessWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [FaIcon(icon, color: const Color(0xFF3B82F6), size: 28), Text(duration, style: const TextStyle(color: Colors.white54))],
+              children: [
+                FaIcon(icon, color: const Color(0xFF3B82F6), size: 28),
+                Text(duration, style: const TextStyle(color: Colors.white54))
+              ],
             ),
             const SizedBox(height: 8),
-            Text(title, style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
+            Text(title,
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold)),
             const SizedBox(height: 4),
-            Text(institution, style: const TextStyle(color:  Color(0xFF3B82F6), fontSize: 16)),
+            Text(institution,
+                style: const TextStyle(color: Color(0xFF3B82F6), fontSize: 16)),
             const SizedBox(height: 8),
-            Text(description, style: const TextStyle(color:  Color(0xFFCACACA))),
+            Text(description, style: const TextStyle(color: Color(0xFFCACACA))),
             const SizedBox(height: 8),
             ...details.map((detail) => Padding(
-              padding: const EdgeInsets.only(bottom: 4.0),
-              child: Text("• $detail", style: const TextStyle(color:  Color(0xFF9A9A9A))),
-            )),
+                  padding: const EdgeInsets.only(bottom: 4.0),
+                  child: Text("• $detail",
+                      style: const TextStyle(color: Color(0xFF9A9A9A))),
+                )),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildCertificationsGrid(double maxWidth, List<Certification> certifications) {
-    int crossAxisCount = maxWidth > 900 ? 4 : maxWidth > 700 ? 3 : maxWidth > 500 ? 2 : 1;
-    double childAspectRatio = maxWidth > 800 ? 2.5 : maxWidth > 600 ? 2.0 : 1.8;
+  Widget _buildCertificationsGrid(
+      double maxWidth, List<Certification> certifications) {
+    int crossAxisCount = maxWidth > 900
+        ? 4
+        : maxWidth > 700
+            ? 3
+            : maxWidth > 500
+                ? 2
+                : 1;
+    double childAspectRatio = maxWidth > 800
+        ? 2.5
+        : maxWidth > 600
+            ? 2.0
+            : 1.8;
 
     return GridView.builder(
       shrinkWrap: true,
@@ -158,7 +205,8 @@ class Certification {
   final String provider;
   final String year;
 
-  const Certification({required this.title, required this.provider, required this.year});
+  const Certification(
+      {required this.title, required this.provider, required this.year});
 }
 
 class CertificationTile extends StatelessWidget {
@@ -169,18 +217,23 @@ class CertificationTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(12),
-        side: const BorderSide(color: Color(0xFF353535), width: 2),),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        side: const BorderSide(color: Color(0xFF353535), width: 2),
+      ),
       margin: const EdgeInsets.symmetric(horizontal: 8.0),
       color: const Color(0xFF1E1E1E),
       child: ListTile(
-        title: Text(certification.title, style: const TextStyle(color: Colors.white)),
+        title: Text(certification.title,
+            style: const TextStyle(color: Colors.white)),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(certification.provider, style: const TextStyle(color: Color(0xFFD4D4D4))),
+            Text(certification.provider,
+                style: const TextStyle(color: Color(0xFFD4D4D4))),
             const SizedBox(height: 4.0),
-            Text(certification.year, style: const TextStyle(color:  Color(0xFF3B82F6))),
+            Text(certification.year,
+                style: const TextStyle(color: Color(0xFF3B82F6))),
           ],
         ),
       ),
