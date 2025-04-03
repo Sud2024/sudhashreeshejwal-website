@@ -207,23 +207,23 @@ class Project {
 
 // Example Projects with Local Image Paths
 const List<Project> projectList = [
-  Project(
-    title: "National Health Mission",
-    description: "The National Health Mission (NHM) Project aimed to enhance healthcare accessibility by digitizing patient records, tracking immunization, and improving service efficiency through a mobile/web application.",
-    technologies: ["Framework: Flutter", "Language: Dart"],
-    hasAccess: false,
-    projectUrl: "",
-    imagePath: "assets/nhm.png", // Local image path
-  ),
-  Project(
-    title: "LockBand",
-    description:
-        "The Lockband Project focused on developing a secure, smart wearable device for authentication and access control, enhancing security through seamless digital verification.",
-    technologies: ["Framework: Android", "Language: Java"],
-    hasAccess: false,
-    projectUrl: "",
-    imagePath: "assets/lockband.png",
-  ),
+  // Project(
+  //   // title: "National Health Mission",
+  //   description: "The National Health Mission (NHM) Project aimed to enhance healthcare accessibility by digitizing patient records, tracking immunization, and improving service efficiency through a mobile/web application.",
+  //   technologies: ["Framework: Flutter", "Language: Dart"],
+  //   hasAccess: false,
+  //   projectUrl: "",
+  //   // imagePath: "assets/nhm.png", // Local image path
+  // ),
+  // Project(
+  //   // title: "LockBand",
+  //   description:
+  //       "The Lockband Project focused on developing a secure, smart wearable device for authentication and access control, enhancing security through seamless digital verification.",
+  //   technologies: ["Framework: Android", "Language: Java"],
+  //   hasAccess: false,
+  //   projectUrl: "",
+  //   // imagePath: "assets/lockband.png",
+  // ),
   Project(
     title: "My Portfolio",
     description:
