@@ -100,9 +100,20 @@ class _LetsConnectState extends State<LetsConnect> {
       ],
       "subject": "Thank You for Contacting Me!",
       "htmlContent": """
-      <p>Dear $recipientName,</p>
-      <p>Thank you for reaching out! Your message has been received, and I will get back to you as soon as possible. I appreciate your interest and look forward to assisting you. If your inquiry is urgent, please feel free to mention it, and I will prioritize my response accordingly.</p>
-      <p>Best Regards,<br>Sudhashree Shejwal</p>
+      <p>Hi {{recipientName}},</p>
+
+<p>Thank you for visiting my portfolio and for taking the time to reach out. I'm truly glad you found something worth exploring on my website.</p>
+
+<p>I’ve received your message and will review it shortly. Whether you're exploring potential collaboration, recruitment opportunities, or simply curious about my work — I appreciate your interest!</p>
+
+<p>If there’s anything specific you'd like to discuss or if you'd like to schedule a conversation, please feel free to reply here.</p>
+
+<p>Thanks again, and I look forward to connecting further.</p>
+
+<p>Warm regards,<br>
+<b>Sudhashree Shejwal</b></p>
+
+
     """
     };
 
@@ -115,6 +126,8 @@ class _LetsConnectState extends State<LetsConnect> {
       },
       body: jsonEncode(bodyToMe),
     );
+
+    print("Response to Me: ${responseToMe.statusCode} - ${responseToMe.body}");
 
     // Sending the second email (To Visitor)
     final responseToVisitor = await http.post(

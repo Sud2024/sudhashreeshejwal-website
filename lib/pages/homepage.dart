@@ -6,7 +6,7 @@ class HomePageWidget extends StatefulWidget {
   const HomePageWidget(
       {super.key,
       required this.featuredHomeKey,
-      required this.featuredLetsConnectKey,
+      required this.featuredLetsConnectKey, 
       required this.featuredProjectsKey});
   final GlobalKey featuredHomeKey;
   final GlobalKey featuredLetsConnectKey;
