@@ -102,11 +102,11 @@ class _LetsConnectState extends State<LetsConnect> {
       "htmlContent": """
       <p>Hi {{recipientName}},</p>
 
-<p>Thank you for visiting my portfolio and for taking the time to reach out. I'm truly glad you found something worth exploring on my website.</p>
+<p>Thank you for reaching out through my portfolio.</p>
 
-<p>I’ve received your message and will review it shortly. Whether you're exploring potential collaboration, recruitment opportunities, or simply curious about my work — I appreciate your interest!</p>
+<p>I’m glad my work caught your interest. I’d be happy to connect and learn more about any opportunities, roles, or discussions you have in mind.</p>
 
-<p>If there’s anything specific you'd like to discuss or if you'd like to schedule a conversation, please feel free to reply here.</p>
+<p>Please feel free to share more details or suggest a convenient time to connect. I look forward to the conversation.</p>
 
 <p>Thanks again, and I look forward to connecting further.</p>
 
