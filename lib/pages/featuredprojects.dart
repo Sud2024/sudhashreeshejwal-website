@@ -99,20 +99,15 @@ class ProjectCard extends StatelessWidget {
               Expanded(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8),
-                  child: Image.asset(
-                    project.imagePath, // Load from local assets
-                    fit: BoxFit.contain,
-                    width: double.infinity,
-                    height: double.infinity,
-                    errorBuilder: (context, error, stackTrace) {
-                      return const Center(
-                        child: Text(
-                          "Image Not Found",
-                          style: TextStyle(color: Colors.white54),
-                        ),
-                      );
-                    },
-                  ),
+                  child: project.imagePath == null
+                      ? const Center(
+                          child: Icon(Icons.auto_awesome,
+                              color: Colors.blueAccent, size: 72),
+                        )
+                      : Image.asset(project.imagePath!,
+                          fit: BoxFit.contain,
+                          width: double.infinity,
+                          height: double.infinity),
                 ),
               ),
               const SizedBox(height: 12),
@@ -193,7 +188,7 @@ class Project {
   final List<String> technologies;
   final bool hasAccess;
   final String projectUrl;
-  final String imagePath; // New field for local images
+  final String? imagePath;
 
   const Project({
     required this.title,
@@ -201,29 +196,12 @@ class Project {
     required this.technologies,
     required this.hasAccess,
     required this.projectUrl,
-    required this.imagePath,
+    this.imagePath,
   });
 }
 
-// Example Projects with Local Image Paths
+// Product and product-management assignments.
 const List<Project> projectList = [
-  // Project(
-  //   // title: "National Health Mission",
-  //   description: "The National Health Mission (NHM) Project aimed to enhance healthcare accessibility by digitizing patient records, tracking immunization, and improving service efficiency through a mobile/web application.",
-  //   technologies: ["Framework: Flutter", "Language: Dart"],
-  //   hasAccess: false,
-  //   projectUrl: "",
-  //   // imagePath: "assets/nhm.png", // Local image path
-  // ),
-  // Project(
-  //   // title: "LockBand",
-  //   description:
-  //       "The Lockband Project focused on developing a secure, smart wearable device for authentication and access control, enhancing security through seamless digital verification.",
-  //   technologies: ["Framework: Android", "Language: Java"],
-  //   hasAccess: false,
-  //   projectUrl: "",
-  //   // imagePath: "assets/lockband.png",
-  // ),
   Project(
     title: "My Portfolio",
     description:
@@ -232,5 +210,54 @@ const List<Project> projectList = [
     hasAccess: true,
     projectUrl: "https://github.com/Sud2024/sudhashreeshejwal-website",
     imagePath: "assets/myportfolio.webp",
+  ),
+  Project(
+    title: "Zomato: Engagement & Retention Strategy",
+    description: "A Tier-1 city strategy using OKRs, a retained-ordering north-star metric, funnel analysis, personalization, frictionless checkout, delivery reliability, and loyalty initiatives.",
+    technologies: ["Product Strategy", "OKRs", "Funnel Analysis"],
+    hasAccess: false,
+    projectUrl: "",
+  ),
+  Project(
+    title: "Swiggy: Scheduled Orders Adoption",
+    description: "A first-principles and JTBD analysis of why users prefer instant ordering, with product improvements that combine certainty, flexibility, progress visibility, and on-time assurance.",
+    technologies: ["First Principles", "JTBD", "UX Research"],
+    hasAccess: false,
+    projectUrl: "",
+  ),
+  Project(
+    title: "Zepto: Increasing Average Order Value",
+    description: "A segmentation and root-cause analysis of basket growth, followed by bundle purchases, tier rewards, personalized recommendations, smart refills, and RICE prioritization.",
+    technologies: ["Segmentation", "RICE", "Growth Strategy"],
+    hasAccess: false,
+    projectUrl: "",
+  ),
+  Project(
+    title: "WhatsApp: Local Service Discovery",
+    description: "A product discovery and market research study exploring trusted, community-driven local service discovery within WhatsApp groups and neighborhood networks.",
+    technologies: ["Market Research", "Competitor Analysis", "User Interviews"],
+    hasAccess: false,
+    projectUrl: "",
+  ),
+  Project(
+    title: "Smart Weekly Meal Planner",
+    description: "A functional prototype for busy professionals that generates personalized weekly meal plans, supports meal swapping, and creates grocery lists from available ingredients.",
+    technologies: ["User Flows", "Prototype", "Usability Feedback"],
+    hasAccess: true,
+    projectUrl: "https://meal-spark-pro.lovable.app/",
+  ),
+  Project(
+    title: "VitaFit Engage+",
+    description: "An engagement and retention initiative combining streaks, XP, rewards, community challenges, and social motivation for working professionals and Gen Z users.",
+    technologies: ["Engagement", "Retention", "Execution Plan"],
+    hasAccess: false,
+    projectUrl: "",
+  ),
+  Project(
+    title: "ConnectEU: Product Requirements & System Design",
+    description: "An MVP specification for a privacy-first EU social platform covering functional requirements, GDPR, data models, APIs, architecture, security, and scalability.",
+    technologies: ["PRD", "System Design", "GDPR"],
+    hasAccess: false,
+    projectUrl: "",
   ),
 ];
