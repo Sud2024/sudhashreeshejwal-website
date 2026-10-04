@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "sudhashreeshejwal-website",
     "public": "build/web",
     "ignore": [
       "firebase.json",
