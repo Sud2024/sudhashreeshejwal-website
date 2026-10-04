@@ -6,9 +6,9 @@ class FeaturedProjects extends StatelessWidget {
   const FeaturedProjects({super.key, required this.featuredProjectsKey});
 
   void _launchURL(String url) async {
-    Uri uri = Uri.parse(url);
+    final uri = Uri.base.resolve(url);
     if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
+      await launchUrl(uri, webOnlyWindowName: "_blank");
     } else {
       debugPrint("Could not launch $url");
     }
@@ -96,20 +96,13 @@ class ProjectCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Image Preview (Local Asset Image)
-              Expanded(
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: project.imagePath == null
-                      ? const Center(
-                          child: Icon(Icons.auto_awesome,
-                              color: Colors.blueAccent, size: 72),
-                        )
-                      : Image.asset(project.imagePath!,
-                          fit: BoxFit.contain,
-                          width: double.infinity,
-                          height: double.infinity),
-                ),
-              ),
+              project.links.isNotEmpty
+                  ? SizedBox(
+                      height: 90,
+                      width: double.infinity,
+                      child: _buildProjectImage(),
+                    )
+                  : Expanded(child: _buildProjectImage()),
               const SizedBox(height: 12),
               // Selectable Project Title
               SelectableText(
@@ -142,7 +135,28 @@ class ProjectCard extends StatelessWidget {
               ),
               const SizedBox(height: 12),
 
-              // View Project Button and External Icon (only if hasAccess is true)
+              if (project.links.isNotEmpty)
+                Wrap(
+                  spacing: 12,
+                  runSpacing: 0,
+                  children: project.links
+                      .map(
+                        (link) => TextButton.icon(
+                          onPressed: () => _launchURL(link.url),
+                          icon: const Icon(Icons.description,
+                              color: Colors.blue, size: 18),
+                          label: Text(
+                            link.label,
+                            style: const TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      )
+                      .toList(),
+                ),
+
               if (project.hasAccess)
                 Row(
                   children: [
@@ -169,12 +183,27 @@ class ProjectCard extends StatelessWidget {
       ),
     );
   }
+
+  Widget _buildProjectImage() {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(8),
+      child: project.imagePath == null
+          ? const Center(
+              child:
+                  Icon(Icons.auto_awesome, color: Colors.blueAccent, size: 72),
+            )
+          : Image.asset(project.imagePath!,
+              fit: BoxFit.contain,
+              width: double.infinity,
+              height: double.infinity),
+    );
+  }
   
   // Function to launch URL
   void _launchURL(String url) async {
-    Uri uri = Uri.parse(url);
+    final uri = Uri.base.resolve(url);
     if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
+      await launchUrl(uri, webOnlyWindowName: "_blank");
     } else {
       debugPrint("Could not launch $url");
     }
@@ -189,6 +218,7 @@ class Project {
   final bool hasAccess;
   final String projectUrl;
   final String? imagePath;
+  final List<ProjectLink> links;
 
   const Project({
     required this.title,
@@ -197,7 +227,15 @@ class Project {
     required this.hasAccess,
     required this.projectUrl,
     this.imagePath,
+    this.links = const [],
   });
+}
+
+class ProjectLink {
+  final String label;
+  final String url;
+
+  const ProjectLink({required this.label, required this.url});
 }
 
 // Product and product-management assignments.
@@ -213,24 +251,49 @@ const List<Project> projectList = [
   ),
   Project(
     title: "Zomato: Engagement & Retention Strategy",
-    description: "A Tier-1 city strategy using OKRs, a retained-ordering north-star metric, funnel analysis, personalization, frictionless checkout, delivery reliability, and loyalty initiatives.",
-    technologies: ["Product Strategy", "OKRs", "Funnel Analysis"],
-    hasAccess: false,
-    projectUrl: "",
+    description: "An engagement and retention prototype showing how Zomato can improve repeat ordering through personalization, frictionless checkout, delivery reliability, and loyalty initiatives.",
+    technologies: ["Product Strategy", "OKRs", "Prototype"],
+    hasAccess: true,
+    projectUrl: "https://zomato-food-delivery-prototype--builderspanchar.replit.app/",
+    imagePath: "assets/zomato-project.png",
+    links: [
+      ProjectLink(
+        label: "Case Study",
+        url: "https://space-mycohort-web.sgp1.digitaloceanspaces.com/2026/05/21/6I25JX3IO94BLOV6.pdf",
+      ),
+    ],
   ),
   Project(
     title: "Swiggy: Scheduled Orders Adoption",
-    description: "A first-principles and JTBD analysis of why users prefer instant ordering, with product improvements that combine certainty, flexibility, progress visibility, and on-time assurance.",
-    technologies: ["First Principles", "JTBD", "UX Research"],
-    hasAccess: false,
-    projectUrl: "",
+    description: "A first-principles and JTBD case study with a clickable prototype showing how Scheduled Orders can feel safer through edit-before-prep flexibility, progress checkpoints, and on-time assurance.",
+    technologies: ["Product Strategy", "JTBD", "Prototype"],
+    hasAccess: true,
+    projectUrl: "https://flexible-scheduled-orders--sud-2026.replit.app/",
+    imagePath: "assets/swiggy-project.png",
+    links: [
+      ProjectLink(
+        label: "Case Study",
+        url: "https://space-mycohort-web.sgp1.digitaloceanspaces.com/2026/02/28/WL417QHKF4BRUGRY.pdf",
+      ),
+      ProjectLink(
+        label: "Deck",
+        url: "https://space-mycohort-web.sgp1.digitaloceanspaces.com/2026/02/21/K0QSQTW9AXG5ZG48.pdf",
+      ),
+    ],
   ),
   Project(
     title: "Zepto: Increasing Average Order Value",
-    description: "A segmentation and root-cause analysis of basket growth, followed by bundle purchases, tier rewards, personalized recommendations, smart refills, and RICE prioritization.",
-    technologies: ["Segmentation", "RICE", "Growth Strategy"],
-    hasAccess: false,
-    projectUrl: "",
+    description: "A growth case study with a clickable basket-builder prototype showing how Zepto can increase AOV through smarter bundles, tier rewards, personalized recommendations, and RICE prioritization.",
+    technologies: ["Growth Strategy", "RICE", "Prototype"],
+    hasAccess: true,
+    projectUrl: "https://zepto-basket-builder-prototype--sudhashree1.replit.app/",
+    imagePath: "assets/zepto-project.png",
+    links: [
+      ProjectLink(
+        label: "Case Study",
+        url: "https://space-mycohort-web.sgp1.digitaloceanspaces.com/2026/03/07/LJIPJC7SKE69K8QE.pdf",
+      ),
+    ],
   ),
   Project(
     title: "WhatsApp: Local Service Discovery",
@@ -245,13 +308,27 @@ const List<Project> projectList = [
     technologies: ["User Flows", "Prototype", "Usability Feedback"],
     hasAccess: true,
     projectUrl: "https://meal-spark-pro.lovable.app/",
+    imagePath: "assets/meal-planner-project.png",
+    links: [
+      ProjectLink(
+        label: "Case Study",
+        url: "https://space-mycohort-web.sgp1.digitaloceanspaces.com/2026/03/14/98VBEDI359S4LR7O.pdf",
+      ),
+    ],
   ),
   Project(
     title: "VitaFit Engage+",
-    description: "An engagement and retention initiative combining streaks, XP, rewards, community challenges, and social motivation for working professionals and Gen Z users.",
-    technologies: ["Engagement", "Retention", "Execution Plan"],
-    hasAccess: false,
-    projectUrl: "",
+    description: "An engagement and retention prototype showing streaks, XP, rewards, and community challenges designed to improve habit formation for fitness users.",
+    technologies: ["Engagement", "Retention", "Prototype"],
+    hasAccess: true,
+    projectUrl: "https://lowfi-flow-lab.lovable.app/",
+    imagePath: "assets/vitafit-project.png",
+    links: [
+      ProjectLink(
+        label: "Case Study",
+        url: "https://space-mycohort-web.sgp1.digitaloceanspaces.com/2026/03/20/U4RW7BOYURRVIERN.pdf",
+      ),
+    ],
   ),
   Project(
     title: "ConnectEU: Product Requirements & System Design",
@@ -259,5 +336,12 @@ const List<Project> projectList = [
     technologies: ["PRD", "System Design", "GDPR"],
     hasAccess: false,
     projectUrl: "",
+    imagePath: "assets/connecteu-project.png",
+    links: [
+      ProjectLink(
+        label: "Case Study",
+        url: "https://space-mycohort-web.sgp1.digitaloceanspaces.com/2026/05/21/TZYCT323F4UTN7MS.pdf",
+      ),
+    ],
   ),
 ];
