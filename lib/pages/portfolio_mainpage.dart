@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myportfolio/common/portfoiliolisttile.dart';
-import 'package:myportfolio/common/textbutton.dart';
 import 'package:myportfolio/pages/aboutmepage.dart';
 import 'package:myportfolio/pages/bottomline.dart';
 import 'package:myportfolio/pages/educationbackground.dart';
@@ -22,6 +21,7 @@ class MyPortfolio extends StatefulWidget {
 class _MyPortfolioState extends State<MyPortfolio> {
   final ScrollController _scrollController = ScrollController();
   var percentage = 0.0;
+  String _activeSection = "Home";
 
   final GlobalKey featuredProjectsKey = GlobalKey();
   final GlobalKey featuredHomeKey = GlobalKey();
@@ -57,112 +57,202 @@ class _MyPortfolioState extends State<MyPortfolio> {
     super.dispose();
   }
 
+  void _scrollTo(GlobalKey key, String section) {
+    setState(() => _activeSection = section);
+    final context = key.currentContext;
+    if (context == null) return;
+    Scrollable.ensureVisible(
+      context,
+      duration: const Duration(seconds: 1),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  Widget _buildBrand(double screenWidth) {
+    final compact = screenWidth < 700;
+    final logoSize = compact ? 44.0 : 58.0;
+
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(
+          width: logoSize,
+          height: logoSize,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(compact ? 14 : 18),
+            border: Border.all(color: const Color(0xFF0EA5E9), width: 2),
+            gradient: const LinearGradient(
+              colors: [Color(0xFF07111F), Color(0xFF101B30)],
+            ),
+            boxShadow: const [
+              BoxShadow(
+                color: Color(0x330EA5E9),
+                blurRadius: 16,
+                offset: Offset(0, 6),
+              ),
+            ],
+          ),
+          child: const Icon(Icons.person_outline,
+              color: Color(0xFF60A5FA), size: 30),
+        ),
+        SizedBox(width: compact ? 10 : 16),
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "My Portfolio",
+              style: GoogleFonts.plusJakartaSans(
+                color: Colors.white,
+                fontSize: compact ? 18 : 26,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+            Text(
+              "SUDHASHREE",
+              style: GoogleFonts.plusJakartaSans(
+                color: const Color(0xFF94A3B8),
+                fontSize: compact ? 11 : 14,
+                fontWeight: FontWeight.w800,
+                letterSpacing: 1.8,
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget _buildNavButton({
+    required String text,
+    required IconData icon,
+    required VoidCallback onPressed,
+    bool isActive = false,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 3),
+      child: TextButton.icon(
+        onPressed: onPressed,
+        icon: Icon(icon,
+            size: 16,
+            color: isActive ? const Color(0xFF60A5FA) : const Color(0xFF94A3B8)),
+        label: Text(text),
+        style: TextButton.styleFrom(
+          foregroundColor:
+              isActive ? const Color(0xFF60A5FA) : const Color(0xFFCBD5E1),
+          textStyle: GoogleFonts.plusJakartaSans(
+            fontSize: 15,
+            fontWeight: FontWeight.w700,
+          ),
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+          backgroundColor:
+              isActive ? const Color(0x1A3B82F6) : Colors.transparent,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+            side: BorderSide(
+              color: isActive ? const Color(0x334B8DFF) : Colors.transparent,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildConnectButton() {
+    return Padding(
+      padding: const EdgeInsets.only(right: 24, left: 8),
+      child: OutlinedButton.icon(
+        onPressed: () => _scrollTo(featuredLetsConnectKey, "Contact"),
+        icon: const Icon(Icons.mail_outline, size: 16),
+        label: const Text("Let's Connect"),
+        style: OutlinedButton.styleFrom(
+          foregroundColor: Colors.white,
+          side: const BorderSide(color: Color(0xFF22D3EE), width: 2),
+          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+          textStyle: GoogleFonts.plusJakartaSans(
+            fontSize: 14,
+            fontWeight: FontWeight.w800,
+          ),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: const Color(0xFF1E1E1E),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF1E1E1E),
-        iconTheme: const IconThemeData(color: Colors.white),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 10.0),
-          child: Row(
-            children: [
-              Icon(
-                Icons.person_outline,
-                color: Colors.white,
-                size: 20,
-              ),
-              const SizedBox(width: 2),
-              Text(
-                "My Portfolio",
-                style: GoogleFonts.nunito(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ],
-          ),
-        ),
+        toolbarHeight: screenWidth < 700 ? 74 : 94,
+        elevation: 0,
+        backgroundColor: const Color(0xF20B0F19),
+        surfaceTintColor: Colors.transparent,
+        iconTheme: const IconThemeData(color: Color(0xFFCBD5E1)),
+        titleSpacing: 26,
+        title: _buildBrand(screenWidth),
         actions: screenWidth > 800
             ? [
-                // Show the buttons in the app bar for larger screens
-                Padding(
-                  padding: const EdgeInsets.only(right: 10.0),
+                Expanded(
                   child: Row(
-                    spacing: 5,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
-                      CustomTextButton(
-                          text: "Home",
-                          icon: Icons.home_outlined,
-                          onPressed: () {
-                            Scrollable.ensureVisible(
-                              featuredHomeKey.currentContext!,
-                              duration: Duration(seconds: 1),
-                              curve: Curves.easeInOut,
-                            );
-                          }),
-                      CustomTextButton(
-                          text: "About",
-                          icon: Icons.info_outline,
-                          onPressed: () {
-                            Scrollable.ensureVisible(
-                              featuredAboutMeKey.currentContext!,
-                              duration: Duration(seconds: 1),
-                              curve: Curves.easeInOut,
-                            );
-                          }),
-                      CustomTextButton(
+                      _buildNavButton(
+                        text: "Home",
+                        icon: Icons.home,
+                        isActive: _activeSection == "Home",
+                        onPressed: () => _scrollTo(featuredHomeKey, "Home"),
+                      ),
+                      _buildNavButton(
+                        text: "About",
+                        icon: Icons.info,
+                        isActive: _activeSection == "About",
+                        onPressed: () => _scrollTo(featuredAboutMeKey, "About"),
+                      ),
+                      _buildNavButton(
                         text: "Projects",
                         icon: Icons.business_center,
-                        onPressed: () {
-                          Scrollable.ensureVisible(
-                            featuredProjectsKey.currentContext!,
-                            duration: Duration(seconds: 1),
-                            curve: Curves.easeInOut,
-                          );
-                        },
+                        isActive: _activeSection == "Projects",
+                        onPressed: () =>
+                            _scrollTo(featuredProjectsKey, "Projects"),
                       ),
-                      CustomTextButton(
+                      _buildNavButton(
                         text: "Skills",
                         icon: Icons.school_outlined,
-                        onPressed: () {
-                          Scrollable.ensureVisible(
-                            featuredSkillsAndExpertiseKey.currentContext!,
-                            duration: Duration(seconds: 1),
-                            curve: Curves.easeInOut,
-                          );
-                        },
+                        isActive: _activeSection == "Skills",
+                        onPressed: () => _scrollTo(
+                            featuredSkillsAndExpertiseKey, "Skills"),
                       ),
-                      CustomTextButton(
+                      _buildNavButton(
                         text: "Experience",
                         icon: Icons.history_edu,
-                        onPressed: () {
-                          Scrollable.ensureVisible(
-                            featuredExperienceKey.currentContext!,
-                            duration: Duration(seconds: 1),
-                            curve: Curves.easeInOut,
-                          );
-                        },
+                        isActive: _activeSection == "Experience",
+                        onPressed: () =>
+                            _scrollTo(featuredExperienceKey, "Experience"),
                       ),
-                      CustomTextButton(
+                      _buildNavButton(
                         text: "Contact",
                         icon: Icons.mail_outline,
-                        onPressed: () {
-                          Scrollable.ensureVisible(
-                            featuredLetsConnectKey.currentContext!,
-                            duration: Duration(seconds: 1),
-                            curve: Curves.easeInOut,
-                          );
-                        },
+                        isActive: _activeSection == "Contact",
+                        onPressed: () =>
+                            _scrollTo(featuredLetsConnectKey, "Contact"),
                       ),
                     ],
                   ),
                 ),
+                _buildConnectButton(),
               ]
             : null,
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            border: Border(
+              bottom: BorderSide(color: Color(0x1AFFFFFF)),
+            ),
+          ),
+        ),
       ),
       drawer: screenWidth <= 800
           ? Drawer(
@@ -174,12 +264,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
                     icon: Icons.home_outlined,
                     title: "Home",
                     onTap: () {
-                      // Handle navigation
-                      Scrollable.ensureVisible(
-                        featuredHomeKey.currentContext!,
-                        duration: Duration(seconds: 1),
-                        curve: Curves.easeInOut,
-                      );
+                      _scrollTo(featuredHomeKey, "Home");
                       Navigator.pop(context);
                     },
                   ),
@@ -187,12 +272,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
                     icon: Icons.info_outline,
                     title: "About",
                     onTap: () {
-                      // Handle navigation
-                      Scrollable.ensureVisible(
-                        featuredAboutMeKey.currentContext!,
-                        duration: Duration(seconds: 1),
-                        curve: Curves.easeInOut,
-                      );
+                      _scrollTo(featuredAboutMeKey, "About");
                       Navigator.pop(context);
                     },
                   ),
@@ -200,12 +280,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
                     icon: Icons.business_center,
                     title: "Projects",
                     onTap: () {
-                      // Handle navigation
-                      Scrollable.ensureVisible(
-                        featuredProjectsKey.currentContext!,
-                        duration: Duration(seconds: 1),
-                        curve: Curves.easeInOut,
-                      );
+                      _scrollTo(featuredProjectsKey, "Projects");
                       Navigator.pop(context);
                     },
                   ),
@@ -213,11 +288,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
                     icon: Icons.school_outlined,
                     title: "Skills",
                     onTap: () {
-                      Scrollable.ensureVisible(
-                        featuredSkillsAndExpertiseKey.currentContext!,
-                        duration: Duration(seconds: 1),
-                        curve: Curves.easeInOut,
-                      );
+                      _scrollTo(featuredSkillsAndExpertiseKey, "Skills");
                       Navigator.pop(context);
                     },
                   ),
@@ -225,11 +296,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
                     icon: Icons.history_edu,
                     title: "Experience",
                     onTap: () {
-                      Scrollable.ensureVisible(
-                        featuredExperienceKey.currentContext!,
-                        duration: Duration(seconds: 1),
-                        curve: Curves.easeInOut,
-                      );
+                      _scrollTo(featuredExperienceKey, "Experience");
                       Navigator.pop(context);
                     },
                   ),
@@ -237,12 +304,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
                     icon: Icons.mail_outline,
                     title: "Contact",
                     onTap: () {
-                      // Handle navigation
-                      Scrollable.ensureVisible(
-                        featuredLetsConnectKey.currentContext!,
-                        duration: Duration(seconds: 1),
-                        curve: Curves.easeInOut,
-                      );
+                      _scrollTo(featuredLetsConnectKey, "Contact");
                       Navigator.pop(context);
                     },
                   ),
